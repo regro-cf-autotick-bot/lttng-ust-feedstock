@@ -1,6 +1,6 @@
 context:
   name: lttng-ust
-  version: "2.13.9"
+  version: "2.15.1"
 
 package:
   name: lttng-ust
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: http://lttng.org/files/lttng-ust/lttng-ust-${{ version }}.tar.bz2
-    sha256: 2ad6d69a54a1d924c18a4aa7a233db104e3cc332bcdd240e196bf7adbed3f712
+    sha256: 37c9b58ea7aa7bc47d6630b52ba1a48ebce095b9a196eab4ddd273d78301792d
 
 build:
   skip: not linux
@@ -28,7 +28,7 @@ requirements:
   run:
     - liburcu
   ignore_run_exports:
-    from_package: 
+    from_package:
       - python
   run_exports:
     - ${{ pin_subpackage(name, upper_bound="x.x") }}
